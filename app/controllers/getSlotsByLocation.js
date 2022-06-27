@@ -28,7 +28,16 @@ const getSlots = async (req, res, next) => {
   }
 };
 
+const connectionCheck = async (req, res, next) => {
+  try {
+    res.json({ status:"SUCCESS" });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getSlotsByLocation,
-  getSlots
+  getSlots,
+  connectionCheck
 };
