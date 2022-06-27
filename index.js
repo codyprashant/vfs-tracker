@@ -7,7 +7,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 require('./app/config/db');
 
-const PORT = process.env.NODE_PORT || 5000;
+const PORT = process.env.PORT || 5000;
 // const IP = config.get('IP');
 const app = express();
 
