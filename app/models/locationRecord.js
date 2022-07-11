@@ -35,12 +35,18 @@ const LocationRecord = new Schema({
   availbilityRes: {
     type: String,
     trim: true,
-    // required: getRequiredFiledMessage('sourceCountry'),
   },
   availbileDate: {
     type: String,
     trim: true,
-    // required: getRequiredFiledMessage('sourceCountry'),
+  },
+  availbileTime: {
+    type: String,
+    trim: true,
+  },
+  availbileSlots: {
+    type: String,
+    trim: true,
   },
   destinationCountry: {
     type: String,
