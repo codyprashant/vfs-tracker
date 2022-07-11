@@ -16,8 +16,11 @@ const getSlotsByLocation = async (req, res, next) => {
 const getSlots = async (req, res, next) => {
   try {
     let completeData = []
-    for(let i = 0; i < 8; i++){
-      let data = await LocationRecord.find({ locationCode: i }).sort({createdAt: 'descending'});
+    let data1 = await LocationRecord.find().distinct('locationCode');
+    console.log(data1)
+
+    for(let i = 0; i < data1.length; i++){
+      let data = await LocationRecord.find({ locationCode: data1[i] }).sort({createdAt: 'descending'});
       if(data) {
         completeData.push(data[0])
       }
