@@ -5,7 +5,7 @@ const { getSlotsByLocation, getSlots, connectionCheck } = require('../controller
 
 module.exports = (app) => {
   app.post('/api/users/getSlotByLocation', getSlotsByLocation);
-  app.get('/api/users/getSlots', getSlots);
+  app.post('/api/users/getSlots', getSlots);
   app.get('/', connectionCheck);
   app.use(errorHandlingMiddleware);
 };
