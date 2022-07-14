@@ -48,6 +48,22 @@ const LocationRecord = new Schema({
     type: String,
     trim: true,
   },
+  allSlots: [
+    {
+      date: {
+        type : String,
+        trim: true
+      },
+      time: {
+        type : String,
+        trim: true
+      },
+      slotCount: {
+        type : String,
+        trim: true
+      },
+    }
+  ],
   destinationCountry: {
     type: String,
     required: getRequiredFiledMessage('destinationCountry'),
